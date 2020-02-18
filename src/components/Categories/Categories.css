@@ -1,0 +1,8 @@
+.Categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 50px;
+    padding: 30px 0px;
+}

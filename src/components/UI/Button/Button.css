@@ -1,0 +1,41 @@
+.Button{
+    background-color: transparent;
+    margin: 5px;
+    padding: 10px;
+    font-size: inherit;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.Button:first-of-type{
+    margin-left: 0;
+}
+
+.Button:hover, 
+.Button:active{
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000000;
+}
+
+.Button:disabled{
+    background-color: #D3D3D3;
+    color: #808080;
+    border: 1px solid #ccc;
+}
+
+.Default{
+    background-color: #F8F8F8;
+}
+
+.Success{
+    background-color: limegreen;
+}
+
+.Danger{
+    background-color: crimson;
+}
+

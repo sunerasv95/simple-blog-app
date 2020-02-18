@@ -1,0 +1,32 @@
+.PostWrapper{
+    margin: 10px 0px;
+    padding: 25px;
+    height: 150px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px #707070;
+}
+
+.PostFooter{
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Title{
+    font-size: 22px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.Body{
+    font-size: 16px;
+    color: grey;
+}

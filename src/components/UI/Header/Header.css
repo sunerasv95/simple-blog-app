@@ -1,0 +1,15 @@
+.Header{
+    width: 90%;
+    padding: 0;
+    margin: 5px 50px;
+}
+
+.HeaderTitle{
+    font-size: 32px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.HorizontalLine{
+    border-color: 1px grey;
+}
