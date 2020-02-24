@@ -11,6 +11,10 @@
     list-style: none;
 }
 
+.Link{
+    text-decoration: none;
+}
+
 
 .Row{
     display: flex;

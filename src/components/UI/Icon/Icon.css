@@ -1,0 +1,15 @@
+.BackButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: flex-end; */
+    /* margin: 8px 15px 8px 8px ; */
+}
+
+.BackIcon{
+    font-size: 28px;
+}
+
+.BackText{
+    font-size: 22px;
+}

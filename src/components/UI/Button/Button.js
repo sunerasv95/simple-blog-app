@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Icon from '../Icon/Icon';
+
 import './Button.css';
 
 const Button = (props) => {
@@ -9,6 +11,9 @@ const Button = (props) => {
         onClick={props.clicked}
         disabled={props.disabled}>
         {props.children}
+        {props.hasIcon ? 
+            <Icon name={props.iconName}
+            size={props.iconSize}/> : null}
     </button>
     );
 }

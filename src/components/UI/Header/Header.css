@@ -1,13 +1,20 @@
-.Header{
+.HeaderContainer{
     width: 90%;
     padding: 0;
     margin: 5px 50px;
 }
 
+.Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
 .HeaderTitle{
     font-size: 32px;
     font-weight: 500;
-    margin: 10px 0;
+    margin: 2px 8px;
 }
 
 .HorizontalLine{

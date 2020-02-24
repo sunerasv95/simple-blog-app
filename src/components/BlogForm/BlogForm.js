@@ -22,6 +22,7 @@ const BlogForm = (props) => {
             </div>
             <div className="FormFooter">
                 <Button btnType="Success"
+                    hasIcon={false}
                     clicked={props.submitHandler}
                     disabled={props.btnDisabled}>
                     Submit

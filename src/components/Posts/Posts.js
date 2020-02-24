@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Post from './Post/Post';
 
@@ -11,22 +12,21 @@ const Posts = (props) =>{
         if (props.posts == null){
             posts = <p>No Posts!</p>; 
         }else if(props.posts != null){
-            let postsArr = null;
-            postsArr = Object.values(props.posts);
+            let postsObj = props.posts;
+            //postsArr = Object.values(props.posts);
             posts = (
-                <ul className="PostsContainer">
-                    {postsArr.map((item, index) => {
-                        return (
-                            <li key={index}>
+                Object.keys(postsObj).map(postKey => {
+                    return (
+                        <Link key={postKey} className="Link" to={"/view/" + postKey}>
+                            <li>
                                 <Post
-                                    id={index}
-                                    title={item.title}
-                                    body={item.content} />
-                            </li>        
-                        )
-                        //console.log("ITEM: ", item.title);
-                    })}
-                </ul>
+                                    id={postKey}
+                                    title={postsObj[postKey]['title']}
+                                    body={postsObj[postKey]['content']} />
+                            </li>
+                        </Link>
+                    )
+                })
             );
         }
 
@@ -35,7 +35,9 @@ const Posts = (props) =>{
         return(
             <div className="Posts">
                 <div>
-                    {posts}
+                    <ul className="PostsContainer">
+                        {posts}
+                    </ul>
                 </div>
             </div>
         );

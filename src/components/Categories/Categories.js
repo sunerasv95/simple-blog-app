@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Category from './Category/Category';
 
@@ -10,14 +11,18 @@ const Categories = (props) => {
     if(!props.categories){
         categories = <p>No categories found!</p>
     }else{
-        let categoryArr = Object.values(props.categories);
+        // let categoryArr = Object.values(props.categories);
         categories = (
-            categoryArr.map((item, index) => {
+            
+            Object.keys(props.categories).map(catKey => {
                 return(
-                    <Category key={index}>
-                        {item.categoryName}
-                    </Category>
-                )
+                    <Link className="Link" to={'/'+ catKey} key={catKey} 
+                        onClick={props.clicked}>
+                        <Category >
+                            {props.categories[catKey]['categoryName']}
+                        </Category>
+                    </Link>
+                );
             })
         );
     }
