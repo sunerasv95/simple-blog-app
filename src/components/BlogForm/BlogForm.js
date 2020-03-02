@@ -21,12 +21,19 @@ const BlogForm = (props) => {
                     placeholder="Enter Content"/>
             </div>
             <div className="FormFooter">
-                <Button btnType="Success"
-                    hasIcon={false}
-                    clicked={props.submitHandler}
-                    disabled={props.btnDisabled}>
-                    Submit
-                </Button>
+                {props.mode === "edit" ? 
+                    <Button btnType="Warning"
+                        hasIcon={false}
+                        clicked={props.submitHandler}
+                        disabled={props.btnDisabled}>
+                        Update
+                    </Button> : 
+                    <Button btnType="Success"
+                        hasIcon={false}
+                        clicked={props.submitHandler}
+                        disabled={props.btnDisabled}>
+                        Submit
+                    </Button> }
             </div>
         </div>
     );

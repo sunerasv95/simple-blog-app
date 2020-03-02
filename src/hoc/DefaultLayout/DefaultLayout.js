@@ -6,6 +6,7 @@ import Navbar from '../../components/Navigation/Navbar/Navbar';
 import Wrapper from '../Wrapper/Wrapper';
 import NewPost from '../../containers/NewPost/NewPost';
 import FullPost from '../../components/FullPost/FullPost';
+import EditPost from '../../components/EditPost/EditPost';
 
 import './DefaultLayout.css';
 
@@ -20,6 +21,7 @@ const DefaultLayout = (props) => {
                     <Route path="/" exact component={Blog} />
                     <Route path="/new-post" component={NewPost} />
                     <Route path="/view/:pid" component={FullPost}/>
+                    <Route path="/edit/:pid" component={FullPost}/>
                     <Route path="/:id" component={Blog}/>
                 </Switch>
                 

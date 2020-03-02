@@ -4,7 +4,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: transparent;
-    margin: 5px;
+    margin: 5px 10px 5px 0px;
     padding: 10px;
     font-size: inherit;
     font-weight: 500;
@@ -41,19 +41,19 @@
 
 .Success{
     background-color: limegreen;
-    color: #000;
+    color: #fff;
 
 }
 
 .Danger{
     background-color: crimson;
-    color: #000;
+    color: #fff;
 
 }
 
 .Warning{
     background-color: #FF9900;
-    color: #000;
+    color: #ffffff;
 
 }
 

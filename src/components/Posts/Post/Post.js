@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import Button from '../../UI/Button/Button';
 
@@ -11,19 +12,24 @@ const Post = (props) => {
             <p className="Title">{props.title}</p>
             <p className="Body">{props.body}</p>
             <div className="PostFooter">
-                <Button 
-                    hasIcon={true}
-                    iconName="fa fa-eye"
-                    iconSize={14}
-                    btnType="Default">
-                </Button>
-                <Button 
-                    hasIcon={true}
-                    iconName="fa fa-pencil"
-                    iconSize={14}
-                    btnType="Warning">
-                </Button>
-                
+                <Link className="Link" 
+                    to={{ pathname: "/view/" + props.id, state:{ mode : "view" }}}>
+                    <Button
+                        hasIcon={true}
+                        iconName="fa fa-eye"
+                        iconSize={14}
+                        btnType="Default">
+                    </Button>
+                </Link>
+                <Link className="Link" 
+                    to={{ pathname: "/edit/" + props.id , state:{ mode : "edit" }}} >
+                    <Button
+                        hasIcon={true}
+                        iconName="fa fa-pencil"
+                        iconSize={14}
+                        btnType="Warning">
+                    </Button>
+                </Link>
             </div>
         </div>
     );

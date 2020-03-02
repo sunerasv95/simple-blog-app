@@ -20,6 +20,11 @@
     align-items: center;
 }
 
+.Link{
+    text-decoration: none;
+}
+
+
 .Title{
     font-size: 22px;
     font-weight: 500;

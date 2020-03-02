@@ -17,14 +17,14 @@ const Posts = (props) =>{
             posts = (
                 Object.keys(postsObj).map(postKey => {
                     return (
-                        <Link key={postKey} className="Link" to={"/view/" + postKey}>
-                            <li>
+                        // <Link key={postKey} className="Link" to={"/view/" + postKey}>
+                            <li key={postKey}>
                                 <Post
                                     id={postKey}
                                     title={postsObj[postKey]['title']}
                                     body={postsObj[postKey]['content']} />
                             </li>
-                        </Link>
+                        // </Link>
                     )
                 })
             );
